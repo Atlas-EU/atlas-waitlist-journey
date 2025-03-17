@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useScrollReveal } from '@/utils/animations';
 import { ArrowDown, Dumbbell, Brain, BarChart, Shield, Zap, UserPlus } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
@@ -48,6 +48,7 @@ const Index = () => {
   useScrollReveal();
   const featuresRef = useRef<HTMLDivElement>(null);
   const waitlistRef = useRef<HTMLDivElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   
   const scrollToFeatures = () => {
     featuresRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -56,6 +57,21 @@ const Index = () => {
   const scrollToWaitlist = () => {
     waitlistRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      // Slow down movement by dividing by 50
+      setMousePosition({
+        x: e.clientX / 50,
+        y: e.clientY / 50,
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
   
   return (
     <div className="min-h-screen bg-atlas-gray-darkest text-white flex flex-col">
@@ -70,10 +86,26 @@ const Index = () => {
       
       {/* Main content */}
       <main className="flex-1 flex flex-col items-center relative pt-24">
-        {/* Gradient background elements */}
+        {/* Animated gradient background elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 rounded-full bg-atlas-green-strong/10 blur-[100px]"></div>
-          <div className="absolute bottom-1/3 right-0 w-1/3 h-1/3 rounded-full bg-atlas-green-medium/5 blur-[80px]"></div>
+          <div 
+            className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 rounded-full bg-atlas-green-strong/10 blur-[100px] transition-transform duration-700 ease-out"
+            style={{ 
+              transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)` 
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-1/3 right-0 w-1/3 h-1/3 rounded-full bg-atlas-green-medium/5 blur-[80px] transition-transform duration-700 ease-out"
+            style={{ 
+              transform: `translate(${-mousePosition.x * 0.8}px, ${-mousePosition.y * 0.8}px)` 
+            }}
+          ></div>
+          <div 
+            className="absolute top-2/3 left-1/4 w-1/4 h-1/4 rounded-full bg-atlas-green-light/8 blur-[70px] transition-transform duration-700 ease-out"
+            style={{ 
+              transform: `translate(${mousePosition.y * 0.5}px, ${-mousePosition.x * 0.5}px)` 
+            }}
+          ></div>
         </div>
         
         {/* Introduction Section - Full height viewport */}
