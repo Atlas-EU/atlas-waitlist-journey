@@ -1,4 +1,3 @@
-
 import { Dumbbell, Brain, BarChart, Shield, Zap, UserPlus } from 'lucide-react';
 import { useScrollReveal } from '@/utils/animations';
 import { useIntersectionObserver } from '@/utils/animations';
@@ -7,37 +6,67 @@ const features = [
   {
     id: 1,
     title: "Custom Routines",
-    description: "Create personalized workout plans tailored to your goals and preferences.",
+    description: (
+      <>
+        Create personalized workout routines. <br />
+        Fast. Easy. No hassle.
+      </>
+    ),
     icon: <Brain className="w-6 h-6 text-atlas-green-strong" />,
   },
   {
     id: 2,
     title: "Progress Tracking",
-    description: "Monitor your improvements with detailed statistics and performance metrics.",
+    description: (
+      <>
+        Visualize your personal records. <br />
+        See stats, spot trends, and stay locked in.
+      </>
+    ),
     icon: <BarChart className="w-6 h-6 text-atlas-green-strong" />,
   },
   {
     id: 3,
-    title: "Guided Sessions",
-    description: "Follow structured workouts with clear instructions and timing.",
+    title: "Flexible Workouts",
+    description: (
+      <>
+        New gym? Change exercises on-the-go.<br />
+        Atlas have your back. You’re in control.
+      </>
+    ),
     icon: <Zap className="w-6 h-6 text-atlas-green-strong" />,
   },
   {
     id: 4,
     title: "Exercise Library",
-    description: "Access a comprehensive database of exercises with proper form guidance.",
+    description: (
+      <>
+        Explore proven moves or create your own. <br />
+        Your journey, your rules.
+      </>
+    ),
     icon: <Dumbbell className="w-6 h-6 text-atlas-green-strong" />,
   },
   {
     id: 5,
     title: "Performance Analytics",
-    description: "Get insights into your workout patterns and strength progression.",
+    description: (
+      <>
+        Get the insights that actually matter. <br />
+        Lift smarter, grow faster.
+      </>
+    ),
     icon: <Shield className="w-6 h-6 text-atlas-green-strong" />,
   },
   {
     id: 6,
     title: "Personal Records",
-    description: "Track your personal bests and celebrate your achievements.",
+    description: (
+      <>
+        Smart, simple & complete workouts summary. <br />
+        Watch your legacy build.
+      </>
+    ),
     icon: <UserPlus className="w-6 h-6 text-atlas-green-strong" />,
   }
 ];

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Download } from 'lucide-react';
@@ -32,15 +31,6 @@ const Navbar = () => {
           <span className="text-2xl font-bold text-white flex items-center">
             <span className="gradient-text">ATLAS</span>
           </span>
-        </div>
-        
-        <div className="hidden md:flex space-x-8">
-          <a href="#features" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
-            Features
-          </a>
-          <a href="https://apps.apple.com/app/atlas" target="_blank" rel="noopener noreferrer" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
-            Download
-          </a>
         </div>
         
         <a 

@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { useScrollReveal } from '@/utils/animations';
 import { ArrowDown } from 'lucide-react';
@@ -47,6 +46,11 @@ const HeroSection = () => {
       {/* Gradient background effect */}
       <div className="absolute inset-0 bg-atlas-gray-darkest">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-atlas-gray-darkest via-atlas-gray-dark to-atlas-gray-darkest opacity-80"></div>
+        {/* Left side green blob */}
+        <div className="absolute top-1/4 -left-1/3 w-2/3 h-2/3 rounded-full bg-atlas-green-strong/25 blur-[160px] pointer-events-none"></div>
+        {/* Right side green blob - horizontally aligned with left */}
+        <div className="absolute top-1/4 -right-1/3 w-2/3 h-2/3 rounded-full bg-atlas-green-strong/25 blur-[160px] pointer-events-none"></div>
+        {/* Existing subtle blobs */}
         <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 rounded-full bg-atlas-green-strong/10 blur-[100px]"></div>
         <div className="absolute bottom-1/3 right-0 w-1/3 h-1/3 rounded-full bg-atlas-green-medium/5 blur-[80px]"></div>
       </div>
@@ -54,7 +58,9 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col justify-center text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-slide-in-right">
-            <span className="gradient-text">Your entire muscle journey</span>, one simple app
+            <span className="gradient-text">Your muscle journey</span>
+            <br />
+            One simple app
           </h1>
           <p className="text-atlas-gray-light text-lg mb-8 max-w-lg mx-auto animate-slide-in-right">
             Build routines, train with purpose, and track your progress—Atlas removes the overthinking.
@@ -66,7 +72,7 @@ const HeroSection = () => {
           </div>
           
           {/* App Store Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-slide-in-right">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-slide-in-right">
             <a 
               href="https://apps.apple.com/app/atlas" 
               target="_blank" 
