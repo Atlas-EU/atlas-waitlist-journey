@@ -1,6 +1,6 @@
+
 import { useEffect, useRef } from 'react';
 import { useScrollReveal } from '@/utils/animations';
-import { Download, Smartphone } from 'lucide-react';
 
 const HeroSection = () => {
   useScrollReveal();
@@ -50,26 +50,39 @@ const HeroSection = () => {
               FITNESS REINVENTED
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-reveal delay-1">
-              Your <span className="gradient-text">AI Powered</span> Fitness Journey
+              AI-Powered Fitness Training: Personalized 
+              <span className="gradient-text"> Workouts</span> & 
+              <span className="gradient-text"> Progress Tracking</span>
             </h1>
             <p className="text-atlas-gray-light text-lg mb-8 max-w-lg animate-reveal delay-2">
-              Personalized workout plans that adapt to your progress using AI and performance-based feedback. Download now and start your transformation today.
+              Get personalized workout plans that adapt to your progress using AI and performance-based feedback. Transform your fitness journey with intelligent training.
             </p>
             
+            {/* App Store Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-reveal delay-3">
               <a 
-                href="#download" 
-                className="button-glow bg-atlas-green-strong hover:bg-atlas-green-medium text-black font-medium px-8 py-3 rounded-full hover-glow hover:translate-y-[-2px] transition-all duration-300 text-center flex items-center justify-center gap-2"
+                href="https://apps.apple.com/app/atlas" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block transition-transform duration-300 hover:scale-105"
               >
-                <Download className="w-5 h-5" />
-                Download Now
+                <img 
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+                  alt="Download on the App Store" 
+                  className="h-14 w-auto"
+                />
               </a>
               <a 
-                href="#features" 
-                className="px-8 py-3 border border-atlas-gray-unselected rounded-full text-white hover:border-atlas-green-strong transition-all duration-300 text-center flex items-center justify-center gap-2"
+                href="https://play.google.com/store/apps/details?id=com.atlas" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block transition-transform duration-300 hover:scale-105"
               >
-                <Smartphone className="w-5 h-5" />
-                Explore Features
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                  alt="Get it on Google Play" 
+                  className="h-14 w-auto"
+                />
               </a>
             </div>
           </div>

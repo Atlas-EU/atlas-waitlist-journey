@@ -38,13 +38,15 @@ const Navbar = () => {
           <a href="#features" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
             Features
           </a>
-          <a href="#download" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
+          <a href="https://apps.apple.com/app/atlas" target="_blank" rel="noopener noreferrer" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
             Download
           </a>
         </div>
         
         <a 
-          href="#download"
+          href="https://apps.apple.com/app/atlas"
+          target="_blank"
+          rel="noopener noreferrer"
           className="button-glow bg-atlas-gray-dark hover:bg-atlas-gray-medium border border-atlas-gray-unselected/60 hover:border-atlas-green-medium/80 text-white px-5 py-2 rounded-full transition-all duration-300 flex items-center gap-2"
         >
           <Download className="w-4 h-4" />
