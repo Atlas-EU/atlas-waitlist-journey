@@ -22,7 +22,7 @@ const Footer = () => {
               <h4 className="font-semibold text-white mb-3">App</h4>
               <ul className="space-y-2">
                 <li><a href="#features" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">Features</a></li>
-                <li><a href="#waitlist" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">Join Waitlist</a></li>
+                <li><a href="#download" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">Download</a></li>
               </ul>
             </div>
             

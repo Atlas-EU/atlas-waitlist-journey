@@ -1,6 +1,6 @@
-
 import { useEffect, useRef } from 'react';
 import { useScrollReveal } from '@/utils/animations';
+import { Download, Smartphone } from 'lucide-react';
 
 const HeroSection = () => {
   useScrollReveal();
@@ -53,20 +53,22 @@ const HeroSection = () => {
               Your <span className="gradient-text">AI Powered</span> Fitness Journey
             </h1>
             <p className="text-atlas-gray-light text-lg mb-8 max-w-lg animate-reveal delay-2">
-              Personalized workout plans that adapt to your progress using AI and performance-based feedback.
+              Personalized workout plans that adapt to your progress using AI and performance-based feedback. Download now and start your transformation today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-reveal delay-3">
               <a 
-                href="#waitlist" 
-                className="button-glow bg-atlas-green-strong hover:bg-atlas-green-medium text-black font-medium px-8 py-3 rounded-full hover-glow hover:translate-y-[-2px] transition-all duration-300 text-center"
+                href="#download" 
+                className="button-glow bg-atlas-green-strong hover:bg-atlas-green-medium text-black font-medium px-8 py-3 rounded-full hover-glow hover:translate-y-[-2px] transition-all duration-300 text-center flex items-center justify-center gap-2"
               >
-                Join the Waitlist
+                <Download className="w-5 h-5" />
+                Download Now
               </a>
               <a 
                 href="#features" 
-                className="px-8 py-3 border border-atlas-gray-unselected rounded-full text-white hover:border-atlas-green-strong transition-all duration-300 text-center"
+                className="px-8 py-3 border border-atlas-gray-unselected rounded-full text-white hover:border-atlas-green-strong transition-all duration-300 text-center flex items-center justify-center gap-2"
               >
+                <Smartphone className="w-5 h-5" />
                 Explore Features
               </a>
             </div>
@@ -102,7 +104,6 @@ const HeroSection = () => {
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-atlas-green-strong/20 to-transparent opacity-30 pointer-events-none"></div>
             </div>
             
-            {/* Floating elements */}
             <div className="absolute -top-6 -right-6 w-20 h-20 glass rounded-2xl rotate-12 animate-float opacity-80 z-0"></div>
             <div className="absolute -bottom-8 -left-8 w-16 h-16 glass rounded-2xl -rotate-12 animate-float opacity-60 z-0" style={{animationDelay: '1s'}}></div>
           </div>

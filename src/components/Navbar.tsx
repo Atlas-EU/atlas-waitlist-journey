@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Download } from 'lucide-react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,16 +38,17 @@ const Navbar = () => {
           <a href="#features" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
             Features
           </a>
-          <a href="#waitlist" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
-            Join Waitlist
+          <a href="#download" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
+            Download
           </a>
         </div>
         
         <a 
-          href="#waitlist"
-          className="button-glow bg-atlas-gray-dark hover:bg-atlas-gray-medium border border-atlas-gray-unselected/60 hover:border-atlas-green-medium/80 text-white px-5 py-2 rounded-full transition-all duration-300"
+          href="#download"
+          className="button-glow bg-atlas-gray-dark hover:bg-atlas-gray-medium border border-atlas-gray-unselected/60 hover:border-atlas-green-medium/80 text-white px-5 py-2 rounded-full transition-all duration-300 flex items-center gap-2"
         >
-          Join Waitlist
+          <Download className="w-4 h-4" />
+          Download
         </a>
       </div>
     </nav>

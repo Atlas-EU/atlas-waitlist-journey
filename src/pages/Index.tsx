@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeatureSection from '@/components/FeatureSection';
-import WaitlistForm from '@/components/WaitlistForm';
+import DownloadSection from '@/components/DownloadSection';
 import Footer from '@/components/Footer';
 import { useScrollReveal } from '@/utils/animations';
 
@@ -15,7 +15,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <FeatureSection />
-      <WaitlistForm />
+      <DownloadSection />
       <Footer />
     </div>
   );
