@@ -66,7 +66,7 @@ const FeatureSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div 
               key={feature.id}
@@ -81,36 +81,6 @@ const FeatureSection = () => {
               <p className="text-atlas-gray-light leading-relaxed">{feature.description}</p>
             </div>
           ))}
-        </div>
-        
-        {/* Call to action */}
-        <div className="text-center animate-reveal delay-4">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="https://apps.apple.com/app/atlas" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block transition-transform duration-300 hover:scale-105"
-            >
-              <img 
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
-                alt="Download on the App Store" 
-                className="h-12 w-auto"
-              />
-            </a>
-            <a 
-              href="https://play.google.com/store/apps/details?id=com.atlas" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block transition-transform duration-300 hover:scale-105"
-            >
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-                alt="Get it on Google Play" 
-                className="h-12 w-auto"
-              />
-            </a>
-          </div>
         </div>
       </div>
     </section>
