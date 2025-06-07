@@ -47,15 +47,14 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col justify-center animate-slide-in-left">
             <span className="text-atlas-green-strong font-medium text-sm md:text-base tracking-wider uppercase mb-4 animate-reveal">
-              FITNESS REINVENTED
+              FITNESS SIMPLIFIED
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-reveal delay-1">
-              AI-Powered Fitness Training: Personalized 
-              <span className="gradient-text"> Workouts</span> & 
-              <span className="gradient-text"> Progress Tracking</span>
+              Create <span className="gradient-text">Custom Routines</span>, Track Your 
+              <span className="gradient-text"> Progress</span>
             </h1>
             <p className="text-atlas-gray-light text-lg mb-8 max-w-lg animate-reveal delay-2">
-              Get personalized workout plans that adapt to your progress using AI and performance-based feedback. Transform your fitness journey with intelligent training.
+              Build personalized workouts, follow guided sessions, and monitor your improvements with detailed statistics. Your fitness journey, simplified.
             </p>
             
             {/* App Store Buttons */}
@@ -88,35 +87,43 @@ const HeroSection = () => {
           </div>
           
           <div className="relative mx-auto animate-slide-in-right">
-            <div className="relative z-10 w-full max-w-md mx-auto">
-              <div className="relative aspect-[9/16] w-full rounded-[2.5rem] overflow-hidden border-[8px] border-atlas-gray-dark shadow-2xl">
-                <div className="absolute inset-0 bg-atlas-gray-medium flex items-center justify-center">
-                  <div className="w-full h-full flex flex-col">
-                    <div className="h-1/2 w-full bg-atlas-gray-dark flex items-center justify-center">
-                      <div className="glow-effect text-atlas-green-strong text-6xl font-bold animate-pulse-subtle">
+            <div className="relative z-10 w-full max-w-sm mx-auto">
+              {/* iPhone mockup */}
+              <div className="relative aspect-[9/19.5] w-full rounded-[3rem] overflow-hidden bg-black shadow-2xl border-[6px] border-gray-800">
+                {/* iPhone notch */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-6 bg-black rounded-b-2xl z-20"></div>
+                
+                {/* Screen content area - this is where you can add your app screenshot */}
+                <div className="absolute inset-2 bg-atlas-gray-medium rounded-[2.5rem] overflow-hidden">
+                  <div className="w-full h-full bg-gradient-to-b from-atlas-gray-dark to-atlas-gray-medium flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <div className="text-atlas-green-strong text-4xl font-bold mb-4 animate-pulse-subtle">
                         ATLAS
                       </div>
-                    </div>
-                    <div className="h-1/2 w-full bg-atlas-gray-medium p-6 flex flex-col justify-center">
-                      <div className="glass p-4 rounded-xl mb-3">
-                        <div className="h-2 w-3/4 bg-atlas-green-medium/30 rounded-full mb-2"></div>
-                        <div className="h-2 w-1/2 bg-atlas-green-medium/20 rounded-full"></div>
-                      </div>
-                      <div className="glass p-4 rounded-xl mb-3">
-                        <div className="h-2 w-2/3 bg-atlas-green-medium/30 rounded-full mb-2"></div>
-                        <div className="h-2 w-3/4 bg-atlas-green-medium/20 rounded-full"></div>
-                      </div>
-                      <div className="glass p-4 rounded-xl">
-                        <div className="h-2 w-1/2 bg-atlas-green-medium/30 rounded-full mb-2"></div>
-                        <div className="h-2 w-2/3 bg-atlas-green-medium/20 rounded-full"></div>
+                      <div className="space-y-3">
+                        <div className="glass p-3 rounded-lg">
+                          <div className="h-2 w-3/4 bg-atlas-green-medium/40 rounded-full mb-2"></div>
+                          <div className="h-2 w-1/2 bg-atlas-green-medium/20 rounded-full"></div>
+                        </div>
+                        <div className="glass p-3 rounded-lg">
+                          <div className="h-2 w-2/3 bg-atlas-green-medium/40 rounded-full mb-2"></div>
+                          <div className="h-2 w-3/4 bg-atlas-green-medium/20 rounded-full"></div>
+                        </div>
+                        <div className="glass p-3 rounded-lg">
+                          <div className="h-2 w-1/2 bg-atlas-green-medium/40 rounded-full mb-2"></div>
+                          <div className="h-2 w-2/3 bg-atlas-green-medium/20 rounded-full"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                
+                {/* iPhone home indicator */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-1/3 h-1 bg-white/60 rounded-full"></div>
               </div>
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-atlas-green-strong/20 to-transparent opacity-30 pointer-events-none"></div>
             </div>
             
+            {/* Floating elements */}
             <div className="absolute -top-6 -right-6 w-20 h-20 glass rounded-2xl rotate-12 animate-float opacity-80 z-0"></div>
             <div className="absolute -bottom-8 -left-8 w-16 h-16 glass rounded-2xl -rotate-12 animate-float opacity-60 z-0" style={{animationDelay: '1s'}}></div>
           </div>
