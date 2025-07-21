@@ -1,4 +1,3 @@
-
 import { cn } from '@/lib/utils';
 
 const currentYear = new Date().getFullYear();
@@ -29,8 +28,16 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold text-white mb-3">Legal</h4>
               <ul className="space-y-2">
-                <li><a href="/privacy-policy" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms-and-conditions" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">Terms of Service</a></li>
+                <li>
+                  <a href="/privacy" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/tos" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">
+                    Terms of Service
+                  </a>
+                </li>
               </ul>
             </div>
             

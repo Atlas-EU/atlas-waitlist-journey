@@ -1,6 +1,6 @@
 import React from "react";
 
-const Terms = () => (
+const TOS = () => (
   <main className="container mx-auto px-6 py-12">
     <h1 className="text-3xl font-bold mb-4">Terms and Conditions</h1>
     <p>This is the Terms and Conditions page.</p>
@@ -8,4 +8,4 @@ const Terms = () => (
   </main>
 );
 
-export default Terms;
+export default TOS;

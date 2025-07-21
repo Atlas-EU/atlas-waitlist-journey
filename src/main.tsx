@@ -5,7 +5,7 @@ import './index.css'
 import App from './App'
 import Index from './pages/Index'
 import Privacy from './pages/privacy'
-import Terms from './pages/terms'
+import TOS from './pages/tos'
 import NotFound from './pages/NotFound'
 
 createRoot(document.getElementById("root")!).render(
@@ -13,8 +13,8 @@ createRoot(document.getElementById("root")!).render(
     <App>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/privacy-policy" element={<Privacy />} />
-        <Route path="/terms-and-conditions" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/tos" element={<TOS />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </App>
