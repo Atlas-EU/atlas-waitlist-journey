@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="text-2xl font-bold text-white flex items-center">
-              <span className="gradient-text">ATLAS</span>
+              ATLAS
             </div>
             <p className="text-atlas-gray-light mt-2 max-w-xs">
               AI-powered fitness companion for your perfect workout routine.

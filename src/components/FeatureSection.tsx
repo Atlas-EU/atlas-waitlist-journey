@@ -1,119 +1,91 @@
-import { Dumbbell, Brain, BarChart, Shield, Zap, UserPlus } from 'lucide-react';
-import { useScrollReveal } from '@/utils/animations';
-import { useIntersectionObserver } from '@/utils/animations';
+import React, { useState } from "react";
 
 const features = [
-  {
-    id: 1,
-    title: "Custom Routines",
-    description: (
-      <>
-        Create personalized workout routines. <br />
-        Fast. Easy. No hassle.
-      </>
-    ),
-    icon: <Brain className="w-6 h-6 text-atlas-green-strong" />,
-  },
-  {
-    id: 2,
-    title: "Progress Tracking",
-    description: (
-      <>
-        Visualize your personal records. <br />
-        See stats, spot trends, and stay locked in.
-      </>
-    ),
-    icon: <BarChart className="w-6 h-6 text-atlas-green-strong" />,
-  },
-  {
-    id: 3,
-    title: "Flexible Workouts",
-    description: (
-      <>
-        New gym? Change exercises on-the-go.<br />
-        Atlas have your back. You’re in control.
-      </>
-    ),
-    icon: <Zap className="w-6 h-6 text-atlas-green-strong" />,
-  },
-  {
-    id: 4,
-    title: "Exercise Library",
-    description: (
-      <>
-        Explore proven moves or create your own. <br />
-        Your journey, your rules.
-      </>
-    ),
-    icon: <Dumbbell className="w-6 h-6 text-atlas-green-strong" />,
-  },
-  {
-    id: 5,
-    title: "Performance Analytics",
-    description: (
-      <>
-        Get the insights that actually matter. <br />
-        Lift smarter, grow faster.
-      </>
-    ),
-    icon: <Shield className="w-6 h-6 text-atlas-green-strong" />,
-  },
-  {
-    id: 6,
-    title: "Personal Records",
-    description: (
-      <>
-        Smart, simple & complete workouts summary. <br />
-        Watch your legacy build.
-      </>
-    ),
-    icon: <UserPlus className="w-6 h-6 text-atlas-green-strong" />,
-  }
+	{
+		title: "Custom Routines",
+		description:
+			"Create personalized workout routines. Fast. Easy. No hassle.",
+		href: "#custom-routines",
+	},
+	{
+		title: "Progress Tracking",
+		description:
+			"Visualize your personal records. See stats, spot trends, and stay locked in.",
+		href: "#progress-tracking",
+	},
+	{
+		title: "Flexible Workouts",
+		description:
+			"New gym? Change exercises on-the-go. Atlas has your back. You're in control.",
+		href: "#flexible-workouts",
+	},
+	{
+		title: "Exercise Library",
+		description:
+			"Explore proven moves or create your own. Your journey, your rules.",
+		href: "#exercise-library",
+	},
+];
+
+const featureImages = [
+	"/images/feature_home.png",
+	"/images/feature_play.png",
+	"/images/feature_plan.png",
+	"/images/feature_history.png",
 ];
 
 const FeatureSection = () => {
-  useScrollReveal();
-  const [ref, isVisible] = useIntersectionObserver();
+	const [selectedIdx, setSelectedIdx] = useState(0);
 
-  return (
-    <section 
-      id="features" 
-      className="py-32 bg-atlas-gray-dark relative overflow-hidden"
-      ref={ref as React.RefObject<HTMLElement>}
-    >
-      {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-atlas-green-strong/5 rounded-full blur-[100px]"></div>
-      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-atlas-green-medium/5 rounded-full blur-[100px]"></div>
-      
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-20 animate-reveal">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="gradient-text">Everything You Need</span> For Your Fitness Goals
-          </h2>
-          <p className="text-atlas-gray-light max-w-2xl mx-auto text-lg">
-            Atlas provides all the tools you need to create, follow, and track your fitness journey with precision and simplicity.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={feature.id}
-              className={`glass-card p-8 rounded-2xl animate-reveal ${
-                index % 3 === 0 ? 'delay-1' : index % 3 === 1 ? 'delay-2' : 'delay-3'
-              }`}
-            >
-              <div className="p-3 bg-atlas-gray-medium rounded-xl inline-block mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
-              <p className="text-atlas-gray-light leading-relaxed">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+	return (
+		<section id="features" className="py-20 min-h-[80vh] flex flex-col items-center justify-center" style={{ backgroundColor: "#1F2024" }}>
+			<div className="w-full flex flex-col items-center justify-center mb-0">
+				<h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+					Everything You Need For Your Fitness Goals
+				</h2>
+				<p className="text-center mb-0 max-w-xl" style={{ color: '#CBCBD7' }}>
+					Atlas provides all the tools you need to create, follow, and track
+					your fitness journey with precision and simplicity.
+				</p>
+			</div>
+			<div className="container mx-auto px-8 md:px-16 flex flex-col md:flex-row items-center justify-center gap-6">
+				<div className="w-full md:w-1/2 flex flex-col items-center justify-center">
+					<div className="w-full flex flex-col gap-6">
+						{features.map((feature, idx) => (
+							<button
+								key={feature.title}
+								onClick={() => setSelectedIdx(idx)}
+								className={`w-full rounded-2xl px-6 py-5 border transition-shadow cursor-pointer flex flex-col items-start focus:outline-none ${
+									selectedIdx === idx
+										? "border-[1px] border-solid" // active
+										: "border-[1px] border-solid" // inactive
+								} hover:shadow-lg`}
+								style={{
+									borderColor: selectedIdx === idx ? '#47FF00' : '#38393C',
+									backgroundColor: '#1F2024',
+									boxShadow: selectedIdx === idx ? '0 0 24px 0 rgba(71,255,0,0.3)' : undefined,
+								}}
+							>
+								<h3 className="font-inter text-[20px] leading-[32px] tracking-[0px] font-semibold mb-2 text-white">
+									{feature.title}
+								</h3>
+								<p className="font-inter text-[14px] leading-[20px] tracking-[0px] text-atlas-gray-light">
+									{feature.description}
+								</p>
+							</button>
+						))}
+					</div>
+				</div>
+				<div className="w-full md:w-1/2 flex items-center justify-center mt-8">
+					<img
+						src={featureImages[selectedIdx]}
+						alt={features[selectedIdx].title + " mockup"}
+						className="w-full h-full object-contain"
+					/>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default FeatureSection;

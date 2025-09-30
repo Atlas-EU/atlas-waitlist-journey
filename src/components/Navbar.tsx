@@ -29,10 +29,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <span className="text-2xl font-bold text-white flex items-center">
-            <span className="gradient-text">ATLAS</span>
+            ATLAS
           </span>
         </div>
         
+        {/* Download button hidden for now */}
+        {/*
         <a 
           href="https://apps.apple.com/app/atlas"
           target="_blank"
@@ -42,6 +44,7 @@ const Navbar = () => {
           <Download className="w-4 h-4" />
           Download
         </a>
+        */}
       </div>
     </nav>
   );
