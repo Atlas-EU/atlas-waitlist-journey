@@ -52,26 +52,27 @@ const HeroSection = () => {
       <div className="container mx-auto px-8 md:px-16 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-6">
           {/* Hero text content */}
-          <div className="flex flex-col justify-center items-center text-center w-full lg:w-1/2 lg:pr-0">
-            <h1 className="font-inter text-[56px] leading-[64px] font-bold mb-4 animate-slide-in-right text-center">
+          <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full lg:w-1/2 lg:pr-0">
+            <h1 className="font-inter text-[36px] lg:text-[60px] leading-[44px] lg:leading-[68px] font-bold mb-4 animate-slide-in-right text-center lg:text-left">
               <span style={{ color: '#47FF00' }}>Building Muscle</span>
               <br />
               Made Easy
             </h1>
-            <p className="font-inter text-[16px] leading-[24px] font-normal mb-10 max-w-lg mx-auto animate-slide-in-right text-center" style={{ color: '#CBCBD7' }}>
-              Create your plan, train with purpose, and track your progress.
+            <p className="font-inter text-[18px] leading-[24px] font-normal mb-2 max-w-lg mx-auto lg:mx-0 animate-slide-in-right text-center lg:text-left" style={{ color: 'rgb(143 144 152 / var(--tw-text-opacity, 1))' }}>
+              Create your plan, show up & beat the logbook.
               <br />Atlas removes the overthinking.
             </p>
             {/* Mobile iPhone image with green background */}
-            <div className="flex lg:hidden w-full justify-center items-center relative mb-6">
+            <div className="flex w-full justify-center items-center relative mb-0 mt-0 lg:mb-2 lg:hidden">
               <img
-                src="/images/iphone-app-mockup.png"
+                src="/images/iphone-mockup-2.png"
                 alt="Atlas app on iPhone"
-                className="max-h-[320px] w-auto drop-shadow-2xl relative"
+                className="w-auto max-h-none lg:max-h-[400px] drop-shadow-2xl"
+                style={{ display: 'block' }}
               />
             </div>
             {/* Early access button */}
-            <div className="w-full flex justify-center mb-8 animate-slide-in-right mt-4">
+            <div className="w-full flex justify-center lg:justify-start mb-8 animate-slide-in-right mt-2 lg:mt-4">
               <button
                 type="button"
                 onClick={() => setShowEarlyAccess(true)}
