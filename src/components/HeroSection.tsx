@@ -53,13 +53,14 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-6">
           {/* Hero text content */}
           <div className="flex flex-col justify-center items-center text-center w-full lg:w-1/2 lg:pr-0">
-            <h1 className="font-inter text-[48px] leading-[56px] font-semibold mb-4 animate-slide-in-right text-center">
-              <span style={{ color: '#47FF00' }}>Your muscle journey</span>
+            <h1 className="font-inter text-[56px] leading-[64px] font-bold mb-4 animate-slide-in-right text-center">
+              <span style={{ color: '#47FF00' }}>Building Muscle</span>
               <br />
-              One simple app
+              Made Easy
             </h1>
             <p className="font-inter text-[16px] leading-[24px] font-normal mb-10 max-w-lg mx-auto animate-slide-in-right text-center" style={{ color: '#CBCBD7' }}>
-              Build routines, train with purpose, and track your progress—Atlas removes the overthinking.
+              Create your plan, train with purpose, and track your progress.
+              <br />Atlas removes the overthinking.
             </p>
             {/* Mobile iPhone image with green background */}
             <div className="flex lg:hidden w-full justify-center items-center relative mb-6">

@@ -12,7 +12,7 @@ const Footer = () => {
               ATLAS
             </div>
             <p className="text-atlas-gray-light mt-2 max-w-xs">
-              AI-powered fitness companion for your perfect workout routine.
+              Your workout precision tracking tool. Simplifying your lifting journey.
             </p>
           </div>
           

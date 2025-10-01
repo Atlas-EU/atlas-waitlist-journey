@@ -2,28 +2,28 @@ import React, { useState } from "react";
 
 const features = [
 	{
-		title: "Custom Routines",
+		title: "Your Daily Game Plan",
 		description:
-			"Create personalized workout routines. Fast. Easy. No hassle.",
+			"Stop second-guessing your training. Have your training week ready to go.",
+		href: "#your-daily-game-plan",
+	},
+	{
+		title: "Execute With Precision",
+		description:
+			"Beat your previous best. Track every rep, set, and weight with ease.",
+		href: "#execute-with-precision",
+	},
+  {
+		title: "Dynamic Routine Builder",
+		description:
+			"Your training is flexible, so is Atlas. Plan every detail, or just keep it simple.",
 		href: "#custom-routines",
 	},
-	{
-		title: "Progress Tracking",
+  {
+		title: "Progress Unlocked",
 		description:
 			"Visualize your personal records. See stats, spot trends, and stay locked in.",
-		href: "#progress-tracking",
-	},
-	{
-		title: "Flexible Workouts",
-		description:
-			"New gym? Change exercises on-the-go. Atlas has your back. You're in control.",
-		href: "#flexible-workouts",
-	},
-	{
-		title: "Exercise Library",
-		description:
-			"Explore proven moves or create your own. Your journey, your rules.",
-		href: "#exercise-library",
+		href: "#progress-unlocked",
 	},
 ];
 

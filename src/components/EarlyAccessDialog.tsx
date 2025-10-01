@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Rocket, CheckCircle2 } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const EarlyAccessDialog = ({ open, onClose }: { open: boolean; onClose: () => void }) => {
-  const [email, setEmail] = useState("");
   const [platform, setPlatform] = useState("");
-  const [success, setSuccess] = useState(false);
+  const [state, handleSubmit] = useForm("manpozql");
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
-    if (open) setSuccess(false);
+    if (open) {
+      setPlatform("");
+      setEmail("");
+    }
   }, [open]);
 
   const isFormValid = email.trim() !== '' && /.+@.+\..+/.test(email) && platform !== '';
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    // For now, just log the values
-    console.log({ email, platform });
-    setSuccess(true);
-  };
 
   if (!open) return null;
 
@@ -26,7 +22,7 @@ const EarlyAccessDialog = ({ open, onClose }: { open: boolean; onClose: () => vo
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
       <div className="w-full max-w-lg bg-[#232428] rounded-2xl shadow-xl p-10 flex flex-col items-center relative">
         <button onClick={onClose} className="absolute top-4 right-4 text-atlas-gray-light hover:text-white text-2xl font-bold">×</button>
-        {success ? (
+        {state.succeeded ? (
           <div className="flex flex-col items-center justify-center h-64">
             <CheckCircle2 className="w-16 h-16 text-atlas-green-strong mb-4" />
             <h3 className="text-xl font-bold mb-2 text-center">You're on the list!</h3>
@@ -38,15 +34,21 @@ const EarlyAccessDialog = ({ open, onClose }: { open: boolean; onClose: () => vo
         <p className="text-atlas-gray-light mb-8 text-center max-w-md">
           Together we’re building it — your feedback will shape what comes next.
         </p>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
+        <form onSubmit={e => {
+          if (!isFormValid) return e.preventDefault();
+          handleSubmit(e);
+        }} className="flex flex-col gap-4 w-full">
           <input
+            id="email"
             type="email"
+            name="email"
             required
             placeholder="Your email"
             value={email}
             onChange={e => setEmail(e.target.value)}
             className="px-4 py-3 rounded-lg bg-atlas-gray-dark text-white border border-atlas-gray-unselected focus:border-atlas-green-strong outline-none transition-colors"
           />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
           <span className="text-atlas-gray-light text-sm text-center mb-1">Choose your desired testing platform</span>
           <div className="flex gap-4 justify-center mt-2">
             <button
@@ -72,9 +74,10 @@ const EarlyAccessDialog = ({ open, onClose }: { open: boolean; onClose: () => vo
               Android
             </button>
           </div>
+          <input type="hidden" name="platform" value={platform} />
           <button
             type="submit"
-            disabled={!isFormValid}
+            disabled={!isFormValid || state.submitting}
             className="mt-2 bg-atlas-green-strong text-black font-semibold px-6 py-3 rounded-xl shadow hover:bg-atlas-green-strong/80 transition-colors flex items-center gap-2 justify-center disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Count Me In
