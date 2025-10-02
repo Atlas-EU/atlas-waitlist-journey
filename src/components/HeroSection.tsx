@@ -71,7 +71,7 @@ const HeroSection = () => {
                 className="w-auto max-h-none lg:max-h-[400px] drop-shadow-2xl -translate-x-5"
                 style={{ display: 'block' }}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                loading="lazy"
+                fetchPriority="high"
               />
             </div>
             {/* Early access button */}
@@ -96,7 +96,7 @@ const HeroSection = () => {
                 alt="Atlas app on iPhone"
                 className="max-h-[800px] w-auto drop-shadow-2xl relative z-10"
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                loading="lazy"
+                fetchPriority="high"
               />
             </div>
           </div>
