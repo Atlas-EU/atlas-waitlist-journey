@@ -65,10 +65,13 @@ const HeroSection = () => {
             {/* Mobile iPhone image with green background */}
             <div className="flex w-full justify-center items-center relative mb-0 mt-0 lg:mb-2 lg:hidden">
               <img
-                src="/images/iphone-mockup-2.webp"
+                src="/images/iphone-mockup-2-x1.png"
+                srcSet="/images/iphone-mockup-2-x05.png 0.5x, /images/iphone-mockup-2-x1.png 1x, /images/iphone-mockup-2-x2.png 2x"
                 alt="Atlas app on iPhone"
                 className="w-auto max-h-none lg:max-h-[400px] drop-shadow-2xl -translate-x-5"
                 style={{ display: 'block' }}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
               />
             </div>
             {/* Early access button */}
@@ -88,9 +91,12 @@ const HeroSection = () => {
             <div className="flex items-center justify-center w-auto h-[600px] relative">
               <div className="absolute left-1/2 top-[47.5%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] rounded-full bg-atlas-green-strong/40 blur-[100px] z-0"></div>
               <img
-                src="/images/iphone-mockup.webp"
+                src="/images/iphone-mockup-x1.png"
+                srcSet="/images/iphone-mockup-x05.png 0.5x, /images/iphone-mockup-x1.png 1x, /images/iphone-mockup-x2.png 2x"
                 alt="Atlas app on iPhone"
                 className="max-h-[800px] w-auto drop-shadow-2xl relative z-10"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                loading="lazy"
               />
             </div>
           </div>

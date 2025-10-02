@@ -33,10 +33,22 @@ const features = [
 ];
 
 const featureImages = [
-	"/images/feature_home.webp",
-	"/images/feature_plan.webp",
-	"/images/feature_play.webp",
-	"/images/feature_history.webp",
+    {
+        src: "/images/feature_home_x1.png",
+        srcset: "/images/feature_home_x05.png 0.5x, /images/feature_home_x1.png 1x, /images/feature_home_x2.png 2x",
+    },
+    {
+        src: "/images/feature_plan_x1.png",
+        srcset: "/images/feature_plan_x05.png 0.5x, /images/feature_plan_x1.png 1x, /images/feature_plan_x2.png 2x",
+    },
+    {
+        src: "/images/feature_play_x1.png",
+        srcset: "/images/feature_play_x05.png 0.5x, /images/feature_play_x1.png 1x, /images/feature_play_x2.png 2x",
+    },
+    {
+        src: "/images/feature_history_x1.png",
+        srcset: "/images/feature_history_x05.png 0.5x, /images/feature_history_x1.png 1x, /images/feature_history_x2.png 2x",
+    },
 ];
 
 const FeatureSection = () => {
@@ -157,9 +169,11 @@ const FeatureSection = () => {
 					</div>
 					<div className="w-full md:w-1/2 flex items-center justify-center mt-8 md:mt-0">
 						<img
-							src={featureImages[selectedIdx]}
-							alt={features[selectedIdx].title + " mockup"}
-							className="w-full h-full object-contain"
+							src={featureImages[selectedIdx].src}
+              srcSet={featureImages[selectedIdx].srcset}
+              alt={features[selectedIdx].title + " mockup"}
+              className="w-full h-full object-contain"
+              sizes="(max-width: 768px) 100vw, 50vw"
 						/>
 					</div>
 				</div>
