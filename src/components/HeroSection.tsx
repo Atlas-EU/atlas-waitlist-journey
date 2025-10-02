@@ -67,7 +67,7 @@ const HeroSection = () => {
               <img
                 src="/images/iphone-mockup-2.png"
                 alt="Atlas app on iPhone"
-                className="w-auto max-h-none lg:max-h-[400px] drop-shadow-2xl"
+                className="w-auto max-h-none lg:max-h-[400px] drop-shadow-2xl -translate-x-5"
                 style={{ display: 'block' }}
               />
             </div>
@@ -96,7 +96,7 @@ const HeroSection = () => {
           </div>
         </div>
         {/* See Features CTA */}
-        <div className="w-full flex justify-center mt-24">
+        <div className="w-full flex justify-center mt-32 md:mt-[10.5rem]">
           <button 
             type="button"
             onClick={scrollToFeatures}
