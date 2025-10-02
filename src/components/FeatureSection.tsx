@@ -103,7 +103,7 @@ const FeatureSection = () => {
 				<h2 className="text-3xl md:text-4xl font-bold text-center">
 					<span className="text-[#47FF00]">Everything You Need</span> For Your Fitness Goals
 				</h2>
-				<p className="font-inter text-[18px] leading-[24px] font-normal mb-2 max-w-lg mx-auto text-center whitespace-normal md:whitespace-nowrap" style={{ color: 'rgb(143 144 152 / var(--tw-text-opacity, 1))' }}>
+				<p className="invisible md:block font-inter text-[18px] leading-[24px] font-normal mb-2 max-w-lg mx-auto text-center whitespace-normal md:whitespace-nowrap" style={{ color: 'rgb(143 144 152 / var(--tw-text-opacity, 1))' }}>
 					The all-in-one tool to create, perform and track your workouts.
 				</p>
 			</div>
@@ -114,17 +114,11 @@ const FeatureSection = () => {
 						{features.map((feature, idx) => (
 							<button
 								key={feature.title}
-								onClick={() => setSelectedIdx(idx)}
-								className={`w-full rounded-2xl px-8 py-4 border transition-shadow cursor-pointer flex flex-col items-center focus:outline-none ${
+								className={`w-full rounded-2xl px-8 py-4 border transition-shadow flex flex-col items-center focus:outline-none ${
 									selectedIdx === idx
 										? "border-[1px] border-solid"
 										: "border-[1px] border-solid"
-								} hover:shadow-lg`}
-								style={{
-									borderColor: selectedIdx === idx ? '#47FF00' : '#38393C',
-									backgroundColor: '#1F2024',
-									boxShadow: selectedIdx === idx ? '0 0 24px 0 rgba(71,255,0,0.3)' : undefined,
-								}}
+								}`}
 							>
 								<h3 className="font-inter text-[18px] leading-[28px] font-semibold mb-2 text-white text-center flex items-center justify-center">
 									<feature.icon className="w-5 h-5 mr-2 flex-shrink-0 text-[#47FF00]" />
