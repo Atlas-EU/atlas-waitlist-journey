@@ -110,12 +110,12 @@ const FeatureSection = () => {
 			<div className="container mx-auto max-w-5xl px-4 md:px-8 flex flex-col md:flex-row items-center justify-center gap-8 flex-1 w-full">
 				{/* Mobile vertical features list, no image */}
 				<div className="w-full md:hidden flex flex-col justify-start items-center">
-					<div className="w-full max-w-lg mx-auto flex flex-col gap-4">
+					<div className="w-full max-w-lg mx-auto flex flex-col gap-6">
 						{features.map((feature, idx) => (
 							<button
 								key={feature.title}
 								onClick={() => setSelectedIdx(idx)}
-								className={`w-full rounded-2xl px-6 py-3 border transition-shadow cursor-pointer flex flex-col items-center focus:outline-none ${
+								className={`w-full rounded-2xl px-8 py-4 border transition-shadow cursor-pointer flex flex-col items-center focus:outline-none ${
 									selectedIdx === idx
 										? "border-[1px] border-solid"
 										: "border-[1px] border-solid"
@@ -126,7 +126,7 @@ const FeatureSection = () => {
 									boxShadow: selectedIdx === idx ? '0 0 24px 0 rgba(71,255,0,0.3)' : undefined,
 								}}
 							>
-								<h3 className="font-inter text-[20px] leading-[32px] font-semibold mb-2 text-white text-center flex items-center justify-center">
+								<h3 className="font-inter text-[18px] leading-[28px] font-semibold mb-2 text-white text-center flex items-center justify-center">
 									<feature.icon className="w-5 h-5 mr-2 flex-shrink-0 text-[#47FF00]" />
 									{feature.title}
 								</h3>

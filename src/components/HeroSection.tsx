@@ -102,7 +102,7 @@ const HeroSection = () => {
           </div>
         </div>
         {/* See Features CTA */}
-        <div className="w-full flex justify-center mt-32 md:mt-[10.5rem]">
+        <div className="w-full flex justify-center mt-16 md:mt-[10.5rem]">
           <button 
             type="button"
             onClick={scrollToFeatures}
