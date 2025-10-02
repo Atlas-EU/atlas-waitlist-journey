@@ -18,14 +18,6 @@ const Footer = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-6 text-sm">
             <div>
-              <h4 className="font-semibold text-white mb-3">App</h4>
-              <ul className="space-y-2">
-                <li><a href="#features" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">Features</a></li>
-                <li><a href="#download" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">Download</a></li>
-              </ul>
-            </div>
-            
-            <div>
               <h4 className="font-semibold text-white mb-3">Legal</h4>
               <ul className="space-y-2">
                 <li>
@@ -45,7 +37,6 @@ const Footer = () => {
               <h4 className="font-semibold text-white mb-3">Contact</h4>
               <ul className="space-y-2">
                 <li><a href="mailto:support@atlasapp.com" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">Support</a></li>
-                <li><a href="#" className="text-atlas-gray-light hover:text-atlas-green-strong transition-colors">Feedback</a></li>
               </ul>
             </div>
           </div>

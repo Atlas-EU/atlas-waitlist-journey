@@ -1,13 +1,20 @@
 import React, { useState, useRef } from "react";
-import { ArrowDown, ArrowLeft, ArrowRight, Calendar, Target, Settings, Trophy } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowRight, Calendar, Target, Zap, Trophy } from 'lucide-react';
 
 const features = [
 	{
-		title: "Your Daily Game Plan",
+		title: "Your Workouts, Simplified",
 		description:
 			"Stop second-guessing your training. Have your training week ready to go.",
-		href: "#your-daily-game-plan",
+		href: "#your-workouts-simplified",
 		icon: Calendar,
+	},
+	{
+		title: "Build Routines Dynamically",
+		description:
+			"Your training is flexible, so is Atlas. Plan every detail, or just keep it simple.",
+		href: "#build-routines-dynamically",
+		icon: Zap,
 	},
 	{
 		title: "Execute With Precision",
@@ -16,26 +23,19 @@ const features = [
 		href: "#execute-with-precision",
 		icon: Target,
 	},
-  {
-		title: "Dynamic Routine Builder",
-		description:
-			"Your training is flexible, so is Atlas. Plan every detail, or just keep it simple.",
-		href: "#custom-routines",
-		icon: Settings,
-	},
-  {
-		title: "Progress Unlocked",
+	{
+		title: "Unlock Your Progress",
 		description:
 			"Visualize your personal records. See stats, spot trends, and stay locked in.",
-		href: "#progress-unlocked",
+		href: "#unlock-your-progress",
 		icon: Trophy,
 	},
 ];
 
 const featureImages = [
 	"/images/feature_home.png",
-	"/images/feature_play.png",
 	"/images/feature_plan.png",
+	"/images/feature_play.png",
 	"/images/feature_history.png",
 ];
 
