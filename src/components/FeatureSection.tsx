@@ -33,10 +33,10 @@ const features = [
 ];
 
 const featureImages = [
-	"/images/feature_home.png",
-	"/images/feature_plan.png",
-	"/images/feature_play.png",
-	"/images/feature_history.png",
+	"/images/feature_home.webp",
+	"/images/feature_plan.webp",
+	"/images/feature_play.webp",
+	"/images/feature_history.webp",
 ];
 
 const FeatureSection = () => {

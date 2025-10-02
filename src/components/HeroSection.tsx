@@ -65,7 +65,7 @@ const HeroSection = () => {
             {/* Mobile iPhone image with green background */}
             <div className="flex w-full justify-center items-center relative mb-0 mt-0 lg:mb-2 lg:hidden">
               <img
-                src="/images/iphone-mockup-2.png"
+                src="/images/iphone-mockup-2.webp"
                 alt="Atlas app on iPhone"
                 className="w-auto max-h-none lg:max-h-[400px] drop-shadow-2xl -translate-x-5"
                 style={{ display: 'block' }}
@@ -88,7 +88,7 @@ const HeroSection = () => {
             <div className="flex items-center justify-center w-auto h-[600px] relative">
               <div className="absolute left-1/2 top-[47.5%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] rounded-full bg-atlas-green-strong/40 blur-[100px] z-0"></div>
               <img
-                src="/images/iphone-mockup.png"
+                src="/images/iphone-mockup.webp"
                 alt="Atlas app on iPhone"
                 className="max-h-[800px] w-auto drop-shadow-2xl relative z-10"
               />
