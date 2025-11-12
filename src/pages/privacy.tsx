@@ -2,7 +2,7 @@ import React from "react";
 
 const Privacy = () => (
   <main className="container mx-auto px-6 py-12">
-    <h1 className="text-3xl font-bold mb-4">Privacy Policy – Atlas</h1>
+    <h1 className="text-3xl font-bold mb-4">Privacy Policy – Atlas mobile app</h1>
     <p>
       <strong>Effective Date:</strong> 22/7/2025
     </p>
@@ -13,14 +13,12 @@ const Privacy = () => (
 
     <h2 className="text-xl font-semibold mt-8 mb-2">1. Controller Information</h2>
     <p>
-      <strong>Responsible party:</strong><br />
-      Adrián Castro Torres<br />
-      Email: <a href="mailto:support@trainwithatlas.app" className="underline text-atlas-green-strong">support@trainwithatlas.app</a>
+      The responsible for data processing about this app  within the scope of the General Data Protection Regulation or GDPR is Adrián Castro Torres, Facetos Street 36, 33013, Oviedo, Asturias, email: support@trainwithatlas.app.
     </p>
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">2. Local-Only Data Storage</h2>
+    <h2 className="text-xl font-semibold mt-8 mb-2">2. Data Collection</h2>
     <p>
-      Atlas does not collect or transmit personal workout data. All logs remain on your device. No cloud sync, login, or registration is required.
+      Atlas does not collect or transmit personal workout data. All data related to your physical activity remains on your device. No cloud sync, login, or registration is required. Atlas may collect and transmit data, always with your consent, by using Firebase Crashlytics or Firebase Analytics, this is always based on the user's consents and can be changed at any moment in the app Settings. Its purpose is improving the app stability and detect crashes or errors (Firebase Crashlytics) or analyze which features are most used or where do users don't continue their journey, and that helps us at Atlas to make it possible to improve the user's experience and understanding of how the app works (Firebase Analytics). 
     </p>
 
     <h2 className="text-xl font-semibold mt-8 mb-2">3. Third-Party Processors</h2>
@@ -35,7 +33,7 @@ const Privacy = () => (
     <p>
       Firebase Crashlytics: Used for crash reporting. May send anonymized crash data like device model, OS version, and crash trace. No personal data is included.<br />
       Firebase Analytics: Used to track anonymized app usage (e.g., screen views). No identifying personal data is collected.<br /><br />
-      <strong>Provider:</strong> Google LLC in the US or Google Ireland Ltd., Google Building Gordon House, Barrow Street, Dublin 4, Ireland<br /><br />
+      <strong>Provider:</strong>Google Ireland Ltd., Google Building Gordon House, Barrow Street, Dublin 4, Ireland or Google LLC in the US<br /><br />
       Consent-based: you may opt out in app settings.<br />
       <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" className="underline text-atlas-green-strong">Firebase Privacy Policy</a>
     </p>
@@ -66,7 +64,7 @@ const Privacy = () => (
 
     <h2 className="text-xl font-semibold mt-8 mb-2">8. Changes to this Policy</h2>
     <p>
-      We may update this Privacy Policy periodically. You will be informed via this website if significant changes occur.
+      We may update this Privacy Policy periodically. You will be informed via this website, and a history of past privacy policies will be available once significant changes occur after the app is live.
     </p>
 
     <h2 className="text-xl font-semibold mt-8 mb-2">9. Governing Law and Jurisdiction</h2>

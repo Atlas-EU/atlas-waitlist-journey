@@ -6,10 +6,11 @@ const TOS = () => (
     <p>
       <strong>Effective Date:</strong> 22/7/2025
     </p>
+    <br />
+    <h2 className="text-l font-regular mt-8 mb-2">Interpretation</h2>
     <p>
       These Terms of Service ("Terms of use", "Terms") constitute a legal agreement between the user and the Atlas mobile application ("App", "Application", "Service"). Please review the following terms carefully before using. By using the App, you agree to comply with these Terms, which rule the user's usage of the Service. If you are not in agreement with these Terms, you must not use the App.
     </p>
-
     <h2 className="text-xl font-semibold mt-8 mb-2">1. Agreement & Eligibility</h2>
     <p>
       These Terms form a legal agreement between you and the developer ("we", "us"). The Service is intended only for individuals who have reached the legal age of majority in their jurisdiction (typically 18+). If you are underage, you are not permitted to use this app.
