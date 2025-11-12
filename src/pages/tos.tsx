@@ -17,18 +17,14 @@ const TOS = () => (
 
     <h2 className="text-xl font-semibold mt-8 mb-2">2. Features & Usage</h2>
     <p>
-      Atlas is a local workout planner that stores all training data on your device. No user accounts or remote backups are required. You may optionally benefit from features powered by third-party services, including Google Analytics, Crashlytics, and RevenueCat.
+      Atlas is a local workout planner that stores all training data on your device. No user accounts or remote backups are required. You may optionally benefit from features powered by third-party services, including Google Analytics, Crashlytics, and RevenueCat. The App is designed and expected to be used on a single device per user.
     </p>
     <br />
     <p>
-      The App is designed and expected to be used on a single device per user. If you wish to use your data on a different device, you must use the backup/export and restore/import functionality available as a Pro feature. This allows you to export your data from one device and import it into another.
-    </p>
-    <br />
-    <p>
-      We do not take any responsibility for loss or corruption of data during the export/import process, or if the user did not use the same version of the app on both devices as advised in the app during this process. The user is solely responsible for ensuring the integrity and compatibility of their data and app versions. Any loss of data, corruption, or incompatibility is not the responsibility of Atlas or its developers.
+      We do not take any responsibility for loss or corruption of the app's data. Any loss of data, corruption, or incompatibility is not the responsibility of Atlas or its developers.
     </p>
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">3. In-App Purchases & Subscription Terms</h2>
+    {/* <h2 className="text-xl font-semibold mt-8 mb-2">3. In-App Purchases & Subscription Terms</h2>
     <p>
       The App offers optional purchases such as Pro subscriptions (monthly, yearly, or lifetime). Payments are processed through Apple or Google Play, with RevenueCat handling subscription status.
     </p>
@@ -47,34 +43,34 @@ const TOS = () => (
           Apple Refund Policy
         </a>
       </li>
-    </ul>
+    </ul> */}
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">4. Warranties & Disclaimers</h2>
+    <h2 className="text-xl font-semibold mt-8 mb-2">3. Warranties & Disclaimers</h2>
     <p>
       The App is provided “AS IS” and “AS AVAILABLE.” We make no guarantees regarding uptime, availability, or fitness for a particular purpose. Use of the Service is at your own risk.
     </p>
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">5. Limitation of Liability</h2>
+    <h2 className="text-xl font-semibold mt-8 mb-2">4. Limitation of Liability</h2>
     <p>
       To the fullest extent permitted by law, we are not liable for indirect, incidental, or consequential damages, including but not limited to data loss or business interruption. In any case, liability is limited to the amount you paid (if any) for the App.
     </p>
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">6. Modifications</h2>
+    <h2 className="text-xl font-semibold mt-8 mb-2">5. Modifications</h2>
     <p>
       We may update these Terms at any time. Material changes will be announced via this website. Continued use of the Service after updates indicates your acceptance.
     </p>
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">7. Account Suspension or Termination</h2>
+    <h2 className="text-xl font-semibold mt-8 mb-2">6. Access restriction</h2>
     <p>
       We reserve the right to terminate or restrict your access to the Service at any time, with or without notice, if we believe you have violated these Terms or used the App improperly.
     </p>
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">8. Dispute Resolution</h2>
+    <h2 className="text-xl font-semibold mt-8 mb-2">7. Dispute Resolution</h2>
     <p>
       If a dispute arises, we ask you to first attempt to resolve it informally by contacting us through our support channel. If unresolved, all disputes, claims, or litigation arising out of or in connection with these Terms shall be governed by and construed in accordance with the laws of Spain. Any legal proceedings or disputes shall be subject to the exclusive jurisdiction of the courts of Oviedo, Asturias, Spain.
     </p>
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">9. Legal Framework</h2>
+    <h2 className="text-xl font-semibold mt-8 mb-2">8. Legal Framework</h2>
     <p>
       <strong>For EU Users:</strong> You are entitled to statutory consumer protections under the laws of your country of residence.
     </p>
@@ -86,7 +82,7 @@ const TOS = () => (
       These Terms and any disputes or claims arising out of or in connection with them shall be governed by and construed in accordance with the laws of Spain. Any litigation, legal proceedings, or disputes arising from the interpretation or execution of these Terms shall be subject to the exclusive jurisdiction of the courts of Oviedo, Asturias, Spain.
     </p>
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">10. General Provisions</h2>
+    <h2 className="text-xl font-semibold mt-8 mb-2">9. General Provisions</h2>
     <p>
       <strong>Severability:</strong> If any part of these Terms is found invalid or unenforceable, the rest shall remain in effect and be interpreted to fulfill its intent as closely as possible.
     </p>
@@ -94,7 +90,7 @@ const TOS = () => (
       <strong>Waiver:</strong> Failure to enforce any right does not constitute a waiver of that or any other right.
     </p>
 
-    <h2 className="text-xl font-semibold mt-8 mb-2">11. Contact</h2>
+    <h2 className="text-xl font-semibold mt-8 mb-2">10. Contact</h2>
     <p>
       For questions about these Terms, please contact us via our support email: <a href="mailto:support@trainwithatlas.app" className="underline text-atlas-green-strong">support@trainwithatlas.app</a>.
     </p>
