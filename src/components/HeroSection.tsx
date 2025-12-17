@@ -1,12 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useScrollReveal } from '@/utils/animations';
-import { ArrowDown, Rocket } from 'lucide-react';
-import EarlyAccessDialog from './EarlyAccessDialog';
+import { ArrowDown } from 'lucide-react';
 
 const HeroSection = () => {
   useScrollReveal();
   const heroRef = useRef<HTMLDivElement>(null);
-  const [showEarlyAccess, setShowEarlyAccess] = useState(false);
   
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -48,7 +46,6 @@ const HeroSection = () => {
     >
       {/* Removed gradient background effect */}
 
-      <EarlyAccessDialog open={showEarlyAccess} onClose={() => setShowEarlyAccess(false)} />
       <div className="container mx-auto px-8 md:px-16 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-6">
           {/* Hero text content */}
@@ -74,16 +71,36 @@ const HeroSection = () => {
                 fetchPriority="high"
               />
             </div>
-            {/* Early access button */}
-            <div className="w-full flex justify-center lg:justify-start mb-8 animate-slide-in-right mt-2 lg:mt-4">
-              <button
-                type="button"
-                onClick={() => setShowEarlyAccess(true)}
-                className="bg-atlas-green-strong text-black font-semibold px-6 py-3 rounded-xl shadow hover:bg-atlas-green-strong/80 transition-colors text-base flex items-center gap-2"
-              >
-                Get Early Access
-                <Rocket className="w-5 h-5" />
-              </button>
+            {/* Download buttons */}
+            <div className="w-full flex flex-col items-center mb-8 animate-slide-in-right mt-8 lg:mt-16">
+              <div className="flex flex-col lg:flex-row items-center gap-3 lg:gap-6">
+                <a
+                  href="https://apps.apple.com/us/app/atlas-fitness-gym-lift-logbook/id6753695467"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform duration-300 hover:scale-105"
+                >
+                  <img
+                    src="/images/app_store_badge.svg"
+                    alt="Download on App Store"
+                    className="h-16 w-auto"
+                  />
+                </a>
+                <p className="text-atlas-gray-light text-sm lg:hidden">or</p>
+                <p className="hidden lg:block text-atlas-gray-light text-sm">or</p>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.adrict99.atlas&hl=es_419"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform duration-300 hover:scale-105"
+                >
+                  <img
+                    src="/images/google_play_badge.svg"
+                    alt="Get it on Google Play"
+                    className="h-16 w-auto"
+                  />
+                </a>
+              </div>
             </div>
           </div>
           {/* Right iPhone image for desktop */}
