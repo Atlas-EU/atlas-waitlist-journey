@@ -72,7 +72,7 @@ const HeroSection = () => {
               />
             </div>
             {/* Download buttons */}
-            <div className="w-full flex flex-col items-center mb-8 animate-slide-in-right mt-8 lg:mt-16">
+            <div className="w-full flex flex-col items-center mb-8 animate-slide-in-right mt-4 lg:mt-8">
               <div className="flex flex-col lg:flex-row items-center gap-3 lg:gap-6">
                 <a
                   href="https://apps.apple.com/us/app/atlas-fitness-gym-lift-logbook/id6753695467"
@@ -101,6 +101,14 @@ const HeroSection = () => {
                   />
                 </a>
               </div>
+            </div>
+            {/* Download QR Code - Desktop only */}
+            <div className="hidden lg:flex w-full justify-center mt-4">
+              <img
+                src="/images/download_qr.png"
+                alt="Download QR Code"
+                className="w-auto h-auto max-w-[165px]"
+              />
             </div>
           </div>
           {/* Right iPhone image for desktop */}
